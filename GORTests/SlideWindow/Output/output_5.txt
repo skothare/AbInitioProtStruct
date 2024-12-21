@@ -1,0 +1,4 @@
+scoreAlpha: 101
+scoreBeta: -34
+scoreTurn: -53
+scoreCoil: -66
