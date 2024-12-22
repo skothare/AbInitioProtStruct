@@ -180,11 +180,14 @@ go test -v CF_functions_test.go
 - **Average accuracy per model**.
 - **Graphs for precision, recall, and F1-score**.
 
-## Infographic for Chou-Fasman and GOR Model Mechanisms
+## Mechanisms of Chou-Fasman (CF) and Garnier-Osguthorpe-Robson (GOR) Models
+
+### Chou-Fasman Algorithm
 ![CF](Figures/CF.png)
 
 **Figure 1:** A figure depicting the overall Chou Fasman algorithm (note: steps have been skipped). a. Shows the favourable helix nucleation site, b. Shows the final extended helix window, c. Shows the favourable sheet nucleation site, d. Shows the sliding window looking for more nucleation sites (in this case it was unfavourable), e. Looking for turn regions (propensity score not added for simplicity) f. Shows found favourable turn regions, g. Shows updating predicted structures onto the final prediction structure, h. Shows overlaps being handled based on higher propensity scores.
 
+### GOR Algorithm
 ![GOR1](Figures/GOR1.png)
 
 **Figure 2:** Calculating the information values using probabilities of finding an amino acid in a particular structural segment.
@@ -193,3 +196,18 @@ go test -v CF_functions_test.go
 ![GOR2](Figures/GOR2.png)
 
 **Figure 3:** Stepwise calculation of structural information scores and final structure prediction.
+
+## References
+1. Prevelige, P., & Fasman, G. D. (1989). Chou-Fasman Prediction of the secondary structure of proteins. Prediction of Protein Structure and the Principles of Protein Conformation, 391–416. https://doi.org/10.1007/978-1-4613-1571-1_9 
+2. Garnier, J., Osguthorpe, D. J., & Robson, B. (1978). Analysis of the accuracy and implications of simple methods for predicting the secondary structure of globular proteins. Journal of Molecular Biology, 120(1), 97–120.
+3. Garnier, J., Gibrat, J. F., & Robson, B. (1996). GOR method for predicting protein secondary structure from amino acid sequence. Methods in Enzymology, 266, 540–553.
+4. Gibrat, J. F., Garnier, J., & Robson, B. (1987). Further developments of protein secondary structure prediction using information theory. Journal of Molecular Biology, 198(3), 425–443.
+5. Anfinsen CB. Principles that govern the folding of protein chains. Science. 1973 Jul 20;181(4096):223-30. doi: 10.1126/science.181.4096.223. PMID: 4124164.
+6. Kabsch, W. and Sander, C. (1983) ‘Dictionary of protein secondary structure: Pattern recognition of hydrogen‐bonded and geometrical features’, Biopolymers, 22(12), pp. 2577–2637. doi:10.1002/bip.360221211. 
+7. Asai K, Hayamizu S, Handa K. Prediction of protein secondary structure by the hidden Markov model. Comput Appl Biosci. 1993 Apr;9(2):141-6. doi: 10.1093/bioinformatics/9.2.141. PMID: 8481815.
+8. Martin, J., Gibrat, JF. & Rodolphe, F. Analysis of an optimal hidden Markov model for secondary structure prediction. BMC Struct Biol 6, 25 (2006). https://doi.org/10.1186/1472-6807-6-25
+9. Ding, Wang et al. “PRT-HMM: A Novel Hidden Markov Model for Protein Secondary Structure Prediction.” 2012 IEEE/ACIS 11th International Conference on Computer and Information Science (2012): 207-212.
+10. Potter, J., Lutsky, A., Nandakumar, R., & Katiyar, S. (2023). Predicting secondary structure protein folding. Pittsburgh, PA USA.
+11. Kendrew, J. C., Bodo, G., Dintzis, H. M., Parrish, R. G., Wyckoff, H., & Phillips, D. C. (1958). A three-dimensional model of the myoglobin molecule obtained by X-ray analysis. Nature, 181(4610), 662–666. https://doi.org/10.1038/181662a0 
+12. McDonough, M. (2024, November 22). Did ai solve the protein-folding problem?. Harvard Medicine Magazine. https://magazine.hms.harvard.edu/articles/did-ai-solve-protein-folding-problem
+13. Chou, P. Y., & Fasman, G. D. (1978). Empirical predictions of protein conformation. Annual Review of Biochemistry, 47(1), 251–276. https://doi.org/10.1146/annurev.bi.47.070178.001343 
