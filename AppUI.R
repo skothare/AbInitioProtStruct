@@ -112,7 +112,7 @@ server <- function(input, output) {
     }
     
     # Call the Go executable with the input sequence
-    go_command <- sprintf("./Group2 %s", sequence)
+    go_command <- sprintf("./AbInitioPS %s", sequence)
     prediction_result <- system(go_command, intern = TRUE)  # Execute and capture output
     
     # Extract predictions based on selected models

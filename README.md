@@ -3,10 +3,16 @@
 # Members: Arth Banka, Riti Bhatia, Sanchitha Kuthethoor, Sumeet Kothare
 
 # Demo link: https://drive.google.com/file/d/1X8fdxQFILHfyiLvSTlYzYjZ6NzGQ1mI8/view?usp=drive_link 
+
+## Computational Problem
+In this project, we were motivated by a central theme: predicting the secondary structure of proteins from their amino acid sequences using straightforward, pre-defined heuristic methods. Rather than relying on modern, data-intensive machine learning approaches, we chose to revisit and implement earlier, “classic” algorithms—such as Chou-Fasman, GOR, and simple Hidden Markov Models (HMMs)—to assess their predictive accuracy against established “ground-truth” or industry-standard predictions (e.g., derived from DSSP or reliable online prediction tools). This historical and heuristic-driven perspective allows us to understand how early computational biology tackled a complex prediction problem without the luxury of advanced machine learning frameworks.
+
 ## Folder Structure
 
 ```
-Group2/
+AbInitioPS/
+├── Figures/
+│   ├── Miscellaneous ".png" files
 ├── GOR_InfoVals/
 │   ├── InfoVal_aHelix.csv
 │   ├── InfoVal_bStrand.csv
@@ -30,8 +36,7 @@ Group2/
 ├── EM_main.go
 ├── GOR_functions_test.go
 ├── GOR_functions.go
-├── Group2
-├── Group2.exe
+├── AbInitioPS
 ├── hmm_functions_test.go
 ├── HMM_functions.go
 ├── main.go
@@ -172,3 +177,16 @@ go test -v CF_functions_test.go
 - **Average accuracy per model**.
 - **Graphs for precision, recall, and F1-score**.
 
+## Infographic for Chou-Fasman and GOR Model Mechanisms
+![CF](Figures/CF.png)
+
+**Figure 1:** A figure depicting the overall Chou Fasman algorithm (note: steps have been skipped). a. Shows the favourable helix nucleation site, b. Shows the final extended helix window, c. Shows the favourable sheet nucleation site, d. Shows the sliding window looking for more nucleation sites (in this case it was unfavourable), e. Looking for turn regions (propensity score not added for simplicity) f. Shows found favourable turn regions, g. Shows updating predicted structures onto the final prediction structure, h. Shows overlaps being handled based on higher propensity scores.
+
+![GOR1](Figures/GOR1.png)
+
+**Figure 2:** Calculating the information values using probabilities of finding an amino acid in a particular structural segment.
+
+
+![GOR2](Figures/GOR2.png)
+
+**Figure 3:** Stepwise calculation of structural information scores and final structure prediction.

@@ -137,7 +137,7 @@ server <- function(input, output) {
       
       # Call the Go executable with the input sequence (adjust command as necessary)
       # Ensure that the Go executable is accessible and has execute permissions
-      go_command <- sprintf("./Group2 %s", protein_sequence)
+      go_command <- sprintf("./AbInitioPS %s", protein_sequence)
       prediction_result <- system(go_command, intern = TRUE)
       
       # Extract predictions for each model from the command output
