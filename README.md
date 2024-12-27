@@ -197,6 +197,12 @@ go test -v CF_functions_test.go
 
 **Figure 3:** Stepwise calculation of structural information scores and final structure prediction.
 
+## Contributions
+Arth Banka:  Worked on the HMM code from research, to implementation and testing functions.
+Riti Bhatia: Worked on the Chou-Fasman code from research to implementation and testing functions.
+Sanchitha Kuthethoor: Worked on the visualizations using RShiny- the user interface as well as the validation app. She also worked on validation of the three models against DSSP predictions. 
+Sumeet Kothare: Worked on the GOR code from research to implementation and testing. Sumeet also worked with Sanchitha on the visualizations and validation.
+
 ## References
 1. Prevelige, P., & Fasman, G. D. (1989). Chou-Fasman Prediction of the secondary structure of proteins. Prediction of Protein Structure and the Principles of Protein Conformation, 391–416. https://doi.org/10.1007/978-1-4613-1571-1_9 
 2. Garnier, J., Osguthorpe, D. J., & Robson, B. (1978). Analysis of the accuracy and implications of simple methods for predicting the secondary structure of globular proteins. Journal of Molecular Biology, 120(1), 97–120.
