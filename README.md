@@ -1,4 +1,4 @@
-# AbInitio Protein Secondary Structure Prediction: Reproduction of classical GOR, Chou–Fasman, and HMMs methods
+# AbInitio Protein Secondary Structure Prediction: Reproduction of classical GOR, Chou–Fasman, and HMM methods
 ## Date: 12th December, 2024
 ## Members: Arth Banka, Riti Bhatia, Sanchitha Kuthethoor, Sumeet Kothare
 
