@@ -1,8 +1,21 @@
-# Group 2: Protein Secondary Structure Prediction
-# Date: 12th December, 2024
-# Members: Arth Banka, Riti Bhatia, Sanchitha Kuthethoor, Sumeet Kothare
+# AbInitio Protein Secondary Structure Prediction: Reproduction of classical GOR, Chou–Fasman, and HMMs methods
+## Date: 12th December, 2024
+## Members: Arth Banka, Riti Bhatia, Sanchitha Kuthethoor, Sumeet Kothare
 
-# Demo link: https://drive.google.com/file/d/1X8fdxQFILHfyiLvSTlYzYjZ6NzGQ1mI8/view?usp=drive_link 
+**Demo link**: https://drive.google.com/file/d/1X8fdxQFILHfyiLvSTlYzYjZ6NzGQ1mI8/view?usp=drive_link 
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8dd8c92d-bb9b-4c00-ab4f-73752c13d4b4" width="900">
+</p>
+
+<p align="center">
+  <b>Figure:</b> Accuracy vs protein length reproduced from the GOR secondary structure prediction study.
+</p>
+
+**Figure description.** Each point represents a protein, plotted by sequence length (y-axis) and percentage of correctly predicted residues (Q3 accuracy, x-axis). Consistent with the original GOR analysis, prediction accuracy shows no strong dependence on protein length. Short proteins exhibit high variance in accuracy, while longer proteins converge toward the dataset mean (~30-40% for all models), supporting the conclusion that secondary structure prediction difficulty is driven by local sequence segments rather than global protein size.
+
+## What we discovered: 
+This reproduction highlights a fundamental limitation of local-window secondary structure predictors and motivates later advances incorporating long-range sequence context.
 
 ## Project Motivation
 In this project, we were motivated by a central theme: predicting the secondary structure of proteins from their amino acid sequences using straightforward, pre-defined heuristic methods. Rather than relying on modern, data-intensive machine learning approaches, we chose to revisit and implement earlier, “classic” algorithms—such as Chou-Fasman, GOR, and simple Hidden Markov Models (HMMs)—to assess their predictive accuracy against established “ground-truth” or industry-standard predictions (e.g., derived from DSSP or reliable online prediction tools). This historical and heuristic-driven perspective allows us to understand how early computational biology tackled a complex prediction problem without the luxury of advanced machine learning frameworks.
@@ -150,21 +163,40 @@ go test -v CF_functions_test.go
 - Additional R libraries: `ggplot2`, `reshape2`.
 
 ### Run `AppUI.R`
-1. Open RStudio.
-2. Load `AppUI.R`.
-3. Click **Run App**.
-4. Use the interface to:
-   - Enter a protein sequence or upload a FASTA file.
-   - Choose models (`Chou-Fasman`, `GOR`, or `HMM`).
-   - View predicted secondary structures and comparison graphs.
+1. Open RStudio and load `AppUI.R`
+2. Click **Run App**
+3. In the UI:
+   - Paste a protein sequence or upload a FASTA file
+   - Select prediction method(s): **Chou–Fasman**, **GOR**, **HMM**
+   - View predicted secondary structure strings and comparison plots
+
 
 #### Inputs
 - **Protein sequence** (text or FASTA file).
 - **Model selection** (`Chou-Fasman`, `GOR`, `HMM`).
 
 #### Outputs
-- Predicted secondary structures.
-- Comparison graphs and character composition graphs.
+<details>
+  <summary><b>Click to view UI screenshots (3-step walkthrough)</b></summary>
+
+  <br/>
+
+  <b>Step 1 — Enter a sequence and select models.</b>
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/49d1be2a-e42e-42c4-a09b-875d287b9d72" width="900">
+  </p>
+
+  <b>Step 2 — View predicted secondary structure strings.</b>
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/fba4b023-c559-419d-af77-9d542d9e704d" width="900">
+  </p>
+
+  <b>Step 3 — Compare character composition predictions across methods.</b>
+  <p align="center">
+    <img src="https://github.com/user-attachments/assets/0c48586d-dce2-4abd-949b-65247d57f588" width="900">
+  </p>
+
+</details>
 
 ### Run `auto_Validation.R`
 1. Open RStudio.
