@@ -175,12 +175,7 @@ go test -v CF_functions_test.go
 - **Protein sequence** (text or FASTA file).
 - **Model selection** (`Chou-Fasman`, `GOR`, `HMM`).
 
-#### Outputs
-<details>
-  <summary><b>Click to view UI screenshots (3-step walkthrough)</b></summary>
-
-  <br/>
-
+#### AppUI.R Outputs
   <b>Step 1 — Enter a sequence and select models.</b>
   <p align="center">
     <img src="https://github.com/user-attachments/assets/49d1be2a-e42e-42c4-a09b-875d287b9d72" width="900">
@@ -196,7 +191,6 @@ go test -v CF_functions_test.go
     <img src="https://github.com/user-attachments/assets/0c48586d-dce2-4abd-949b-65247d57f588" width="900">
   </p>
 
-</details>
 
 ### Run `auto_Validation.R`
 1. Open RStudio.
